@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link th:href="@{/static/css/signup.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h1>Edit Profile</h1>
+<form th:action="@{/user/updateUser}" th:object="${newUserRequestDTO}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" th:value="*{username}" th:classappend="${#fields.hasErrors('username')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+    <div class="invalid-feedback" th:if="${existingUser != null}" th:text="${existingUser}"></div>
+
+    <label for="firstName">First name:</label>
+    <input type="text" id="firstName" name="firstName" th:value="*{firstName}" th:classappend="${#fields.hasErrors('firstName')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+
+    <label for="lastName">Last name:</label>
+    <input type="text" id="lastName" name="lastName" th:value="*{lastName}" th:classappend="${#fields.hasErrors('lastName')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" th:value="*{password}" th:classappend="${#fields.hasErrors('password')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" th:value="*{confirmPassword}" th:classappend="${#fields.hasErrors('confirmPassword')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></div>
+    <div class="invalid-feedback" th:if="${passMismatch != null}" th:text="${passMismatch}"></div>
+    <button type="submit">Update</button>
+</form>
+<button><a th:href="@{/main}">Back</a></button>
+</body>
+</html>

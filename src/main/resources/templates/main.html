@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link th:href="@{/static/css/ind.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="container">
+        <div>
+            <ul>
+                <li>
+                    <a class="navbar-brand" th:href="@{/main}" th:text="${username}"></a>
+                </li>
+                <li>
+                    <a th:href="@{/user/edit}">Edit profile</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a th:href="@{/home}">Home</a>
+                </li>
+                <li>
+                    <a th:href="@{/interpol/users}">Interpol All Users</a>
+                </li>
+                <li>
+                    <a th:href="@{/logout}">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h1>Main Page | Interpol</h1>
+<h4>Actions</h4>
+<ul>
+    <li>
+        <a th:href="@{/user/newRequest}">Add new missing person request</a>
+    </li>
+    <li>
+        <a th:href="@{/user/myRequests}">My requests</a>
+    </li>
+    <li>
+        <a th:href="@{/user/mediaForm}">Add image</a>
+    </li>
+    <li>
+        <a th:href="@{/user/images}">My images</a>
+    </li>
+</ul>
+</body>
+</html>
