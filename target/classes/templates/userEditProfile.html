@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link th:href="@{/static/css/signup.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h1>Edit Profile</h1>
+<form th:action="@{/user/updateUsername}" th:object="${newUsernameDTO}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" th:value="*{username}" th:classappend="${#fields.hasErrors('username')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+    <div class="invalid-feedback" th:if="${existingUser != null}" th:text="${existingUser}"></div>
+</form>
+
+<button><a th:href="@{/main}">Back</a></button>
+</body>
+</html>

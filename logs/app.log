@@ -1,0 +1,51 @@
+2024-07-06 01:12:47.239 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-07-06 01:12:47.271 [main] INFO  com.example.pract.PractApplication - Starting PractApplication using Java 21.0.2 with PID 3908 (C:\2course\practice\pract\target\classes started by mayak in C:\2course\practice\pract)
+2024-07-06 01:12:47.278 [main] INFO  com.example.pract.PractApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-06 01:12:47.981 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-06 01:12:48.053 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+2024-07-06 01:12:48.774 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-06 01:12:48.782 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-06 01:12:48.782 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-06 01:12:48.782 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-06 01:12:48.846 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-06 01:12:48.846 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1528 ms
+2024-07-06 01:12:49.062 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-06 01:12:49.110 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-06 01:12:49.150 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-06 01:12:49.406 [main] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-06 01:12:49.430 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-06 01:12:49.750 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68479e8b
+2024-07-06 01:12:49.750 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-06 01:12:50.695 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-06 01:12:50.790 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-06 01:12:51.061 [main] INFO  org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-06 01:12:51.486 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-06 01:12:51.523 [main] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-07-06 01:12:51.588 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2024-07-06 01:12:52.080 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-06 01:12:52.093 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-06 01:12:52.101 [main] INFO  com.example.pract.PractApplication - Started PractApplication in 5.17 seconds (process running for 6.24)
+2024-07-06 01:12:58.969 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-06 01:12:58.969 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-06 01:12:58.974 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-07-06 01:12:59.015 [http-nio-8080-exec-1] INFO  com.example.pract.controller.MainController - Handling request to index page
+2024-07-06 01:13:00.859 [http-nio-8080-exec-3] INFO  com.example.pract.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-07-06 01:13:00.859 [http-nio-8080-exec-3] INFO  com.example.pract.filter.EncodingFilter - EncodingFilter applied successfully
+2024-07-06 01:13:00.859 [http-nio-8080-exec-3] INFO  com.example.pract.controller.MainController - Handling request to authenticate page
+2024-07-06 01:13:08.364 [http-nio-8080-exec-5] INFO  com.example.pract.controller.MainController - loading by username
+2024-07-06 01:13:08.517 [http-nio-8080-exec-5] INFO  com.example.pract.controller.MainController - Getting user
+2024-07-06 01:13:08.518 [http-nio-8080-exec-5] INFO  com.example.pract.controller.MainController - Getting authorities: [USER]
+2024-07-06 01:13:08.653 [http-nio-8080-exec-6] INFO  com.example.pract.controller.MainController - Handling request to Main page
+2024-07-06 01:13:08.653 [http-nio-8080-exec-6] INFO  com.example.pract.controller.MainController - username: aaan
+2024-07-06 01:13:10.911 [http-nio-8080-exec-8] INFO  com.example.pract.controller.MainController - Handling request to Edit Profile page
+2024-07-06 01:13:10.919 [http-nio-8080-exec-8] INFO  com.example.pract.controller.MainController - Existing user: aaan
+2024-07-06 01:13:23.615 [http-nio-8080-exec-2] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String com.example.pract.controller.UserController.updateUsername(com.example.pract.dto.NewUsernameDTO,org.springframework.ui.Model,org.springframework.validation.BindingResult,org.springframework.security.core.Authentication) with 2 errors: [Field error in object 'newUsernameDTO' on field 'username': rejected value []; codes [Pattern.newUsernameDTO.username,Pattern.username,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [newUsernameDTO.username,username]; arguments []; default message [username],[Ljakarta.validation.constraints.Pattern$Flag;@6306f44b,^[a-zA-Z0-9]{3,30}$]; default message [Username must be between 3 and 30 characters and contain only letters and digits]] [Field error in object 'newUsernameDTO' on field 'username': rejected value []; codes [NotEmpty.newUsernameDTO.username,NotEmpty.username,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [newUsernameDTO.username,username]; arguments []; default message [username]]; default message [Username can not be empty]] ]
+2024-07-06 01:13:23.622 [http-nio-8080-exec-2] ERROR com.example.pract.controller.MainController - An error occurred
+2024-07-06 01:13:50.201 [http-nio-8080-exec-3] INFO  com.example.pract.controller.MainController - Handling request to Edit Profile page
+2024-07-06 01:13:50.218 [http-nio-8080-exec-3] INFO  com.example.pract.controller.MainController - Existing user: aaan
+2024-07-06 01:13:56.530 [http-nio-8080-exec-6] INFO  com.example.pract.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-07-06 01:13:56.530 [http-nio-8080-exec-6] INFO  com.example.pract.filter.EncodingFilter - EncodingFilter applied successfully
+2024-07-06 01:13:56.530 [http-nio-8080-exec-6] INFO  com.example.pract.controller.MainController - Handling request to authenticate page
+2024-07-06 01:17:12.577 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m22s706ms39µs300ns).
+2024-07-06 02:18:33.458 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h17s999ms579µs300ns).
+2024-07-06 18:39:49.808 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h19m8s40ms418µs900ns).
