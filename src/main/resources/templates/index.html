@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome Page</title>
+  <link th:href="@{/static/css/ind.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a class="navbar-brand" href="/">Interpol</a>
+    <div class="menu">
+      <ul>
+        <li>
+          <a th:href="@{/auth}">Login</a>
+        </li>
+        <li>
+          <a th:href="@{/register}">Register</a>
+        </li>
+        <li>
+          <a th:href="@{/home}">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</body>
+</html>

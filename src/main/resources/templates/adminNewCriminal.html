@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Criminal</title>
+    <link th:href="@{/static/css/request.css}" rel="stylesheet">
+</head>
+<body>
+    <h1>New Criminal</h1>
+    <form th:action="@{/admin/addCriminal}" th:object="${newCriminalDTO}" method="post">
+        <p>Criminal info:</p>
+        <label for="criminalFirstName">First name:</label>
+        <input type="text" id="criminalFirstName" name="criminalFirstName" th:value="*{criminalFirstName}" th:classappend="${#fields.hasErrors('criminalFirstName')} ? 'is-invalid'" />
+        <div class="invalid-feedback" th:if="${#fields.hasErrors('criminalFirstName')}" th:errors="*{criminalFirstName}"></div>
+
+        <label for="criminalLastName">Last name:</label>
+        <input type="text" id="criminalLastName" name="criminalLastName" th:value="*{criminalLastName}" th:classappend="${#fields.hasErrors('criminalLastName')} ? 'is-invalid'" />
+        <div class="invalid-feedback" th:if="${#fields.hasErrors('criminalLastName')}" th:errors="*{criminalLastName}"></div>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" th:value="*{location}" th:classappend="${#fields.hasErrors('location')} ? 'is-invalid'" />
+        <div class="invalid-feedback" th:if="${#fields.hasErrors('location')}" th:errors="*{location}"></div>
+
+        <label for="crime">Crime:</label>
+        <input type="text" id="crime" name="crime" th:field="*{crime}" th:classappend="${#fields.hasErrors('crime')} ? 'is-invalid'" />
+        <div class="invalid-feedback" th:if="${#fields.hasErrors('crime')}" th:errors="*{crime}"></div>
+
+        <label for="wantedSince">Wanted since:</label>
+        <input type="datetime-local" id="wantedSince" name="wantedSince" th:value="*{wantedSince}" th:classappend="${#fields.hasErrors('wantedSince')} ? 'is-invalid'" />
+        <div class="invalid-feedback" th:if="${#fields.hasErrors('wantedSince')}" th:errors="*{wantedSince}"></div>
+
+        <label for="reward">Reward (optional):</label>
+        <input type="number" id="reward" name="reward" th:value="*{reward}" step="0.01" th:classappend="${#fields.hasErrors('reward')} ? 'is-invalid'" />
+        <div class="invalid-feedback" th:if="${#fields.hasErrors('reward')}" th:errors="*{reward}"></div>
+
+        <button type="submit">Add new criminal</button>
+    </form>
+    <button><a th:href="@{/main}">Back</a></button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+<th:block th:fragment="userForm(user)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" th:value="*{user.username}" th:classappend="${#fields.hasErrors('user.username')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('user.username')}" th:errors="*{user.username}"></div>
+    <div class="invalid-feedback" th:if="${existingUser != null}" th:text="${existingUser}"></div>
+
+    <label for="firstName">First name:</label>
+    <input type="text" id="firstName" name="firstName" th:value="*{user.firstName}" th:classappend="${#fields.hasErrors('user.firstName')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('user.firstName')}" th:errors="*{user.firstName}"></div>
+
+    <label for="lastName">Last name:</label>
+    <input type="text" id="lastName" name="lastName" th:value="*{user.lastName}" th:classappend="${#fields.hasErrors('user.lastName')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('user.lastName')}" th:errors="*{user.lastName}"></div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" th:value="*{user.password}" th:classappend="${#fields.hasErrors('user.password')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('user.password')}" th:errors="*{user.password}"></div>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" th:value="*{user.confirmPassword}" th:classappend="${#fields.hasErrors('user.confirmPassword')} ? 'is-invalid'" />
+    <div class="invalid-feedback" th:if="${#fields.hasErrors('user.confirmPassword')}" th:errors="*{user.confirmPassword}"></div>
+    <div class="invalid-feedback" th:if="${passMismatch != null}" th:text="${passMismatch}"></div>
+</th:block>

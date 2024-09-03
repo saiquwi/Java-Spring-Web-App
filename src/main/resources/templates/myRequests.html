@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My requests</title>
+    <link th:href="@{/static/css/usersIP.css}" rel="stylesheet">
+</head>
+<body>
+<h2>My requests</h2>
+<table>
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Location</th>
+        <th>Missing since</th>
+        <th>Other Info</th>
+        <th>Reward</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody th:each="el : ${requests}">
+    <tr>
+        <td th:text="${el.getFirstName}"></td>
+        <td th:text="${el.getLastName}"></td>
+        <td th:text="${el.getLocation}"></td>
+        <td th:text="${el.getMissingSinceDate}"></td>
+        <td th:text="${el.getOtherInfo}"></td>
+        <td th:text="${el.getReward}"></td>
+        <td th:text="${el.getStatus}"></td>
+        <td>
+            <form th:if="${el.getStatus().name() == 'REQUESTED'}"
+                  th:action="@{/interpol/editRequest/{id}(id=${el.getId()})}" method="get">
+                <button type="submit">Edit</button>
+            </form>
+            <span th:else></span>
+        </td>
+        <td>
+            <form th:if="${el.getStatus().name() == 'REQUESTED'}"
+                  th:action="@{/interpol/deleteRequest/{id}(id=${el.getId()})}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+            <span th:else></span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<button><a th:href="@{/main}">Back</a></button>
+</body>
+</html>
