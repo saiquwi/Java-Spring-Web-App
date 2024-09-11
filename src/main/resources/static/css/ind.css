@@ -1,0 +1,177 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 3%;
+    padding-top: 15%;
+    background-color: #f0f0f0;
+}
+
+nav {
+    background-color: #001f3f;
+    padding: 1rem 0;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #cce5ff;
+}
+
+.menu {
+    width: 30%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+ul li a {
+    font-size: 1rem;
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li a:hover {
+    color: #cce5ff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1%;
+    color: #001f3f;
+}
+
+div {
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #001f3f;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #cce5ff;
+    color: #cce5ff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #001f3f;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #cce5ff;
+    color: #001f3f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #001f3f;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.news-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 10px;
+    color: #001f3f;
+}
+
+p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.news-type {
+    font-style: italic;
+    color: #555;
+}
+
+.news-date {
+    font-size: 0.9em;
+    color: #999;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}

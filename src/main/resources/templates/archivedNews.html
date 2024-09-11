@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Archive</title>
+    <link th:href="@{/static/css/ind.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h2>News Archive</h2>
+<div class="news-container">
+    <div th:each="news : ${newsList}" class="news-item">
+        <h2 th:text="${news.title}"></h2>
+        <p class="news-type" th:text="${news.type}"></p> <!-- Вывод типа новости -->
+        <p th:text="${news.description}"></p>
+        <p class="news-date" th:text="${#temporals.format(news.date, 'dd.MM.yyyy HH:mm')}"></p>
+    </div>
+</div>
+<button><a th:href="@{/main}">Back</a></button>
+</body>
+</html>

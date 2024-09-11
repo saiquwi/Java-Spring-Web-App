@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Missing now</title>
+    <link th:href="@{/static/css/lists.css}" rel="stylesheet">
+</head>
+<body>
+    <h2>Missing now</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Location</th>
+            <th>Missing since</th>
+            <th>Other Info</th>
+            <th>Reward</th>
+            <th th:if="${role == 'ADMIN'}"></th>
+        </tr>
+        </thead>
+        <tbody th:each="el : ${missing}">
+        <tr>
+            <td th:text="${el.getFirstName}"></td>
+            <td th:text="${el.getLastName}"></td>
+            <td th:text="${el.getLocation}"></td>
+            <td th:text="${el.getMissingSinceDate}"></td>
+            <td th:text="${el.getOtherInfo}"></td>
+            <td th:text="${el.getReward}"></td>
+            <td th:if="${role == 'ADMIN'}">
+                <div class="dropdown">
+                    <button class="dropbtn">Change status</button>
+                    <div class="dropdown-content">
+                        <form th:action="@{/admin/missingStatusFound/{id}(id=${el.getId()})}" method="post">
+                            <button type="submit">Found</button>
+                        </form>
+                        <form th:action="@{/admin/missingStatusDead/{id}(id=${el.getId()})}" method="post">
+                            <button type="submit">Dead</button>
+                        </form>
+                        <form th:action="@{/admin/missingStatusNoTrace/{id}(id=${el.getId()})}" method="post">
+                            <button type="submit">No trace</button>
+                        </form>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button><a th:href="@{/main}">Back</a></button>
+</body>
+</html>

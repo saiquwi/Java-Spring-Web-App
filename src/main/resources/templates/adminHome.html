@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <link th:href="@{/static/css/ind.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a th:href="@{/interpol/users}">Users</a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Missing</button>
+                        <div class="dropdown-content">
+                            <a th:href="@{/interpol/curmissing}">Missing now</a>
+                            <a th:href="@{/admin/unansweredRequests}">Unanswered requests</a>
+                            <a th:href="@{/interpol/newRequest}">Add missing person</a>
+                            <a th:href="@{/interpol/finishedMissing}">Finished Cases</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Criminals</button>
+                        <div class="dropdown-content">
+                            <a th:href="@{/interpol/wanted}">Wanted</a>
+                            <a th:href="@{/admin/newCriminal}">Add criminal</a>
+                            <a th:href="@{/interpol/finishedCriminals}">Finished Cases</a>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="dropdown">
+                    <button class="dropbtn">News</button>
+                    <div class="dropdown-content">
+                        <a th:href="@{/admin/createNews}">Add news</a>
+                        <a th:href="@{/admin/archivedNews}">Archived news</a>
+                    </div>
+                </div></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a class="navbar-brand" th:href="@{/main}" th:text="${username}"></a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Settings</button>
+                        <div class="dropdown-content">
+                            <a th:href="@{/user/changeUsername}">Change username</a>
+                            <a th:href="@{/user/changeProfile}">Edit firstname, lastname</a>
+                            <a th:href="@{/user/changePassword}">Change password</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a th:href="@{/logout}">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h1>Admin | Interpol</h1>
+<h2>News Feed</h2>
+<div class="news-container">
+    <div th:each="news : ${newsList}" class="news-item">
+        <h2 th:text="${news.title}"></h2>
+        <p class="news-type" th:text="${news.type}"></p> <!-- Вывод типа новости -->
+        <p th:text="${news.description}"></p>
+        <p class="news-date" th:text="${#temporals.format(news.date, 'dd.MM.yyyy HH:mm')}"></p>
+    </div>
+</div>
+</body>
+</html>
